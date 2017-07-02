@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "ESPhotoSelectView.h"
 
-@interface ViewController ()
+@interface ViewController () <ESPhotoSelectViewDelegate>
 
 @end
 
@@ -16,14 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    
+    ESPhotoSelectView *view = [[ESPhotoSelectView alloc] initWithFrame:CGRectMake(0, 20, screenSize.width, 200)];
+    
+    [self.view addSubview:view];
+    
+    view.delegate = self;
+    
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - ESPhotoSelectViewDelegate
+- (void)ESPhotoSelectViewDidSelectedPitureWithImageArray:(NSArray<UIImage *> *)imageArray {
+    NSLog(@"imageArray = %@",imageArray);
 }
-
 
 @end

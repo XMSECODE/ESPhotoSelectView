@@ -13,6 +13,20 @@
 		0490BECC1F07995E00498CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0490BECA1F07995E00498CFE /* Main.storyboard */; };
 		0490BECE1F07995E00498CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0490BECD1F07995E00498CFE /* Assets.xcassets */; };
 		0490BED11F07995E00498CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0490BECF1F07995E00498CFE /* LaunchScreen.storyboard */; };
+		0490BEDB1F079B7A00498CFE /* ESPhotoAuthorizationStatusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEDA1F079B7A00498CFE /* ESPhotoAuthorizationStatusManager.m */; };
+		0490BEDE1F079E3600498CFE /* ESPhotoSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEDD1F079E3600498CFE /* ESPhotoSelectView.m */; };
+		0490BEE21F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEE01F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.m */; };
+		0490BEE31F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0490BEE11F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.xib */; };
+		0490BEE71F07A21900498CFE /* ESPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEE61F07A21900498CFE /* ESPhotoManager.m */; };
+		0490BEEB1F07A26600498CFE /* ESPHAssetInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEEA1F07A26600498CFE /* ESPHAssetInfoModel.m */; };
+		0490BEEE1F07A70D00498CFE /* UIImageView+PHAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEED1F07A70D00498CFE /* UIImageView+PHAsset.m */; };
+		0490BEF11F07A7E000498CFE /* ESPHAssetImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEF01F07A7E000498CFE /* ESPHAssetImageManager.m */; };
+		0490BEF41F07A91200498CFE /* UIImageViewPHAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEF31F07A91200498CFE /* UIImageViewPHAssetModel.m */; };
+		0490BEF71F07E17E00498CFE /* photo_sel_photoPicker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490BEF61F07E17E00498CFE /* photo_sel_photoPicker@2x.png */; };
+		0490BEF91F07E18600498CFE /* photo_def_photoPicker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490BEF81F07E18600498CFE /* photo_def_photoPicker@2x.png */; };
+		0490BEFC1F07E48300498CFE /* ESAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEFB1F07E48300498CFE /* ESAsset.m */; };
+		0490BEFF1F07E87300498CFE /* ESBottomOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEFE1F07E87300498CFE /* ESBottomOptionView.m */; };
+		0490BF011F07E89400498CFE /* ESBottomOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0490BF001F07E89400498CFE /* ESBottomOptionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +40,30 @@
 		0490BECD1F07995E00498CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0490BED01F07995E00498CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0490BED21F07995E00498CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0490BED91F079B7A00498CFE /* ESPhotoAuthorizationStatusManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPhotoAuthorizationStatusManager.h; sourceTree = "<group>"; };
+		0490BEDA1F079B7A00498CFE /* ESPhotoAuthorizationStatusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPhotoAuthorizationStatusManager.m; sourceTree = "<group>"; };
+		0490BEDC1F079E3600498CFE /* ESPhotoSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPhotoSelectView.h; sourceTree = "<group>"; };
+		0490BEDD1F079E3600498CFE /* ESPhotoSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPhotoSelectView.m; sourceTree = "<group>"; };
+		0490BEDF1F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPhotoSelectCollectionViewCell.h; sourceTree = "<group>"; };
+		0490BEE01F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPhotoSelectCollectionViewCell.m; sourceTree = "<group>"; };
+		0490BEE11F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESPhotoSelectCollectionViewCell.xib; sourceTree = "<group>"; };
+		0490BEE51F07A21900498CFE /* ESPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPhotoManager.h; sourceTree = "<group>"; };
+		0490BEE61F07A21900498CFE /* ESPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPhotoManager.m; sourceTree = "<group>"; };
+		0490BEE91F07A26600498CFE /* ESPHAssetInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPHAssetInfoModel.h; sourceTree = "<group>"; };
+		0490BEEA1F07A26600498CFE /* ESPHAssetInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPHAssetInfoModel.m; sourceTree = "<group>"; };
+		0490BEEC1F07A70D00498CFE /* UIImageView+PHAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+PHAsset.h"; sourceTree = "<group>"; };
+		0490BEED1F07A70D00498CFE /* UIImageView+PHAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+PHAsset.m"; sourceTree = "<group>"; };
+		0490BEEF1F07A7E000498CFE /* ESPHAssetImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPHAssetImageManager.h; sourceTree = "<group>"; };
+		0490BEF01F07A7E000498CFE /* ESPHAssetImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPHAssetImageManager.m; sourceTree = "<group>"; };
+		0490BEF21F07A91200498CFE /* UIImageViewPHAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewPHAssetModel.h; sourceTree = "<group>"; };
+		0490BEF31F07A91200498CFE /* UIImageViewPHAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewPHAssetModel.m; sourceTree = "<group>"; };
+		0490BEF61F07E17E00498CFE /* photo_sel_photoPicker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_sel_photoPicker@2x.png"; sourceTree = "<group>"; };
+		0490BEF81F07E18600498CFE /* photo_def_photoPicker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_def_photoPicker@2x.png"; sourceTree = "<group>"; };
+		0490BEFA1F07E48300498CFE /* ESAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESAsset.h; sourceTree = "<group>"; };
+		0490BEFB1F07E48300498CFE /* ESAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESAsset.m; sourceTree = "<group>"; };
+		0490BEFD1F07E87300498CFE /* ESBottomOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESBottomOptionView.h; sourceTree = "<group>"; };
+		0490BEFE1F07E87300498CFE /* ESBottomOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESBottomOptionView.m; sourceTree = "<group>"; };
+		0490BF001F07E89400498CFE /* ESBottomOptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESBottomOptionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +96,7 @@
 		0490BEC01F07995E00498CFE /* ESPhotoSelectView */ = {
 			isa = PBXGroup;
 			children = (
+				0490BED81F079B3E00498CFE /* ESPhotoSelectView */,
 				0490BEC41F07995E00498CFE /* AppDelegate.h */,
 				0490BEC51F07995E00498CFE /* AppDelegate.m */,
 				0490BEC71F07995E00498CFE /* ViewController.h */,
@@ -77,6 +116,53 @@
 				0490BEC21F07995E00498CFE /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0490BED81F079B3E00498CFE /* ESPhotoSelectView */ = {
+			isa = PBXGroup;
+			children = (
+				0490BEF81F07E18600498CFE /* photo_def_photoPicker@2x.png */,
+				0490BEF61F07E17E00498CFE /* photo_sel_photoPicker@2x.png */,
+				0490BEEC1F07A70D00498CFE /* UIImageView+PHAsset.h */,
+				0490BEED1F07A70D00498CFE /* UIImageView+PHAsset.m */,
+				0490BEE81F07A23400498CFE /* Model */,
+				0490BEE41F07A20200498CFE /* Manager */,
+				0490BED91F079B7A00498CFE /* ESPhotoAuthorizationStatusManager.h */,
+				0490BEDA1F079B7A00498CFE /* ESPhotoAuthorizationStatusManager.m */,
+				0490BEDC1F079E3600498CFE /* ESPhotoSelectView.h */,
+				0490BEDD1F079E3600498CFE /* ESPhotoSelectView.m */,
+				0490BEFD1F07E87300498CFE /* ESBottomOptionView.h */,
+				0490BEFE1F07E87300498CFE /* ESBottomOptionView.m */,
+				0490BF001F07E89400498CFE /* ESBottomOptionView.xib */,
+				0490BEDF1F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.h */,
+				0490BEE01F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.m */,
+				0490BEE11F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.xib */,
+			);
+			path = ESPhotoSelectView;
+			sourceTree = "<group>";
+		};
+		0490BEE41F07A20200498CFE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0490BEE51F07A21900498CFE /* ESPhotoManager.h */,
+				0490BEE61F07A21900498CFE /* ESPhotoManager.m */,
+				0490BEEF1F07A7E000498CFE /* ESPHAssetImageManager.h */,
+				0490BEF01F07A7E000498CFE /* ESPHAssetImageManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		0490BEE81F07A23400498CFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0490BEF21F07A91200498CFE /* UIImageViewPHAssetModel.h */,
+				0490BEF31F07A91200498CFE /* UIImageViewPHAssetModel.m */,
+				0490BEE91F07A26600498CFE /* ESPHAssetInfoModel.h */,
+				0490BEEA1F07A26600498CFE /* ESPHAssetInfoModel.m */,
+				0490BEFA1F07E48300498CFE /* ESAsset.h */,
+				0490BEFB1F07E48300498CFE /* ESAsset.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +196,7 @@
 				TargetAttributes = {
 					0490BEBD1F07995E00498CFE = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 592AQVU6H7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,7 +224,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0490BF011F07E89400498CFE /* ESBottomOptionView.xib in Resources */,
+				0490BEF71F07E17E00498CFE /* photo_sel_photoPicker@2x.png in Resources */,
 				0490BED11F07995E00498CFE /* LaunchScreen.storyboard in Resources */,
+				0490BEE31F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.xib in Resources */,
+				0490BEF91F07E18600498CFE /* photo_def_photoPicker@2x.png in Resources */,
 				0490BECE1F07995E00498CFE /* Assets.xcassets in Resources */,
 				0490BECC1F07995E00498CFE /* Main.storyboard in Resources */,
 			);
@@ -150,9 +241,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0490BEF41F07A91200498CFE /* UIImageViewPHAssetModel.m in Sources */,
+				0490BEE71F07A21900498CFE /* ESPhotoManager.m in Sources */,
+				0490BEDB1F079B7A00498CFE /* ESPhotoAuthorizationStatusManager.m in Sources */,
+				0490BEFF1F07E87300498CFE /* ESBottomOptionView.m in Sources */,
+				0490BEDE1F079E3600498CFE /* ESPhotoSelectView.m in Sources */,
+				0490BEFC1F07E48300498CFE /* ESAsset.m in Sources */,
 				0490BEC91F07995E00498CFE /* ViewController.m in Sources */,
+				0490BEF11F07A7E000498CFE /* ESPHAssetImageManager.m in Sources */,
+				0490BEEE1F07A70D00498CFE /* UIImageView+PHAsset.m in Sources */,
+				0490BEEB1F07A26600498CFE /* ESPHAssetInfoModel.m in Sources */,
 				0490BEC61F07995E00498CFE /* AppDelegate.m in Sources */,
 				0490BEC31F07995E00498CFE /* main.m in Sources */,
+				0490BEE21F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 592AQVU6H7;
 				INFOPLIST_FILE = ESPhotoSelectView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.XMSECODE.ESPhotoSelectView;
@@ -285,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 592AQVU6H7;
 				INFOPLIST_FILE = ESPhotoSelectView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.XMSECODE.ESPhotoSelectView;
