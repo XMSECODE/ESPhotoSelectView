@@ -14,6 +14,12 @@
 
 - (void)ESBottomOptionViewDidClickCompleteButton:(ESBottomOptionView *)view;
 
+- (void)ESBottomOptionViewDidClickPhotoButton:(ESBottomOptionView *)view;
+
+- (void)ESBottomOptionViewDidClickEditButton:(ESBottomOptionView *)view;
+
+- (void)ESBottomOptionViewDidClickOriginalButton:(ESBottomOptionView *)view state:(BOOL)isSelected;
+
 @end
 
 @interface ESBottomOptionView : UIView

@@ -81,7 +81,7 @@ static ESPHAssetImageManager *staticESPHAssetImageManager;
     }];
 }
 
-- (void)loadImageWithPHAsset:(PHAsset *)asset size:(CGSize)size success:(void(^)(UIImage *iamge))success failure:(void(^)(NSError *error))failure {
+- (void)loadImageWithPHAsset:(PHAsset *)asset size:(CGSize)size success:(void(^)(UIImage *image))success failure:(void(^)(NSError *error))failure {
     PHImageRequestOptions* options = [[PHImageRequestOptions alloc] init];
     options.resizeMode = PHImageRequestOptionsResizeModeFast;
     

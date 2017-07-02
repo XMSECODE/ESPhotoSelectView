@@ -19,7 +19,7 @@
 
 - (void)loadOriginalImageWithPHAsset:(PHAsset *)asset success:(void(^)(UIImage *image))success failure:(void(^)(NSError *error))failure;
 
-- (void)loadImageWithPHAsset:(PHAsset *)asset size:(CGSize)size success:(void(^)(UIImage *iamge))success failure:(void(^)(NSError *error))failure;
+- (void)loadImageWithPHAsset:(PHAsset *)asset size:(CGSize)size success:(void(^)(UIImage *image))success failure:(void(^)(NSError *error))failure;
 
 
 @end

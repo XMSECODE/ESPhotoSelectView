@@ -24,12 +24,14 @@
     
     [self.view addSubview:view];
     
+    view.allowMutibleSelect = YES;
+    
     view.delegate = self;
     
 }
 
 #pragma mark - ESPhotoSelectViewDelegate
-- (void)ESPhotoSelectViewDidSelectedPitureWithImageArray:(NSArray<UIImage *> *)imageArray {
+- (void)ESPhotoSelectViewDidSelectedPictureWithImageArray:(NSArray<UIImage *> *)imageArray {
     NSLog(@"imageArray = %@",imageArray);
 }
 

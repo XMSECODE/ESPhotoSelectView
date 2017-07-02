@@ -29,6 +29,8 @@
 
 @property(nonatomic,assign)NSInteger loadImageCount;
 
+@property(nonatomic,assign)BOOL isSelectedOriginal;
+
 @end
 
 @implementation ESPhotoSelectView
@@ -53,9 +55,9 @@
     self.flowLayout.minimumLineSpacing = 10;
     self.flowLayout.minimumInteritemSpacing = 10;
     self.flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    self.flowLayout.itemSize = CGSizeMake(self.bounds.size.width / 3, self.bounds.size.height - 30);
+    self.flowLayout.itemSize = CGSizeMake(self.bounds.size.width / 3, self.bounds.size.height - 35);
     
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height - 30) collectionViewLayout:flowLayout];
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height - 35) collectionViewLayout:flowLayout];
     [self addSubview:collectionView];
     self.collectionView = collectionView;
     self.collectionView.delegate = self;
@@ -65,9 +67,10 @@
 }
 
 - (void)setupBottomOptionView {
-    CGFloat y = self.bounds.size.height - 30;
+    CGFloat height = 35;
+    CGFloat y = self.bounds.size.height - height;
     ESBottomOptionView *bottomOptionView = [[UINib nibWithNibName:@"ESBottomOptionView" bundle:nil] instantiateWithOwner:nil options:nil].lastObject;
-    bottomOptionView.frame = CGRectMake(0, y, self.bounds.size.width, 30);
+    bottomOptionView.frame = CGRectMake(0, y, self.bounds.size.width, height);
     self.bottomOptionView = bottomOptionView;
     self.bottomOptionView.delegate = self;
     [self addSubview:bottomOptionView];
@@ -77,7 +80,6 @@
 - (void)loadLocalPhotoData {
     __weak __typeof(self)weakSelf = self;
     [[ESPhotoManager sharedPhotoManager] getPHAssetArrayFromUserPhotoLibraryBydefaultWithSuccess:^(NSArray<PHAsset *> *PHAssetArray) {
-        
         NSMutableArray *temArray = [[NSMutableArray alloc] init];
         for (int i = 0; i < PHAssetArray.count; i++) {
             ESAsset *esAsset = [[ESAsset alloc] init];
@@ -116,17 +118,43 @@
 
 #pragma mark - ESPhotoSelectCollectionViewCellDelegate
 - (void)ESPhotoSelectCollectionViewCell:(ESPhotoSelectCollectionViewCell *)cell PHAsset:(ESAsset *)asset {
-    if (asset.isSeleted) {
-        [self.selectedAssetArray addObject:asset];
+    if (self.allowMutibleSelect) {
+        if (asset.isSeleted) {
+            [self.selectedAssetArray addObject:asset];
+        }else {
+            if ([self.selectedAssetArray containsObject:asset]) {
+                [self.selectedAssetArray removeObject:asset];
+            }
+        }
     }else {
-        if ([self.selectedAssetArray containsObject:asset]) {
-            [self.selectedAssetArray removeObject:asset];
+        if (asset.isSeleted) {
+            if (self.selectedAssetArray.count > 0) {
+                ESAsset *lastAsset = self.selectedAssetArray.lastObject;
+                lastAsset.isSeleted = NO;
+                [self.selectedAssetArray removeObject:lastAsset];
+                [self.selectedAssetArray addObject:asset];
+                [self.collectionView reloadData];
+            }else {
+                [self.selectedAssetArray addObject:asset];
+            }
+        }else {
+            if ([self.selectedAssetArray containsObject:asset]) {
+                [self.selectedAssetArray removeObject:asset];
+            }
         }
     }
 }
 
 #pragma mark - ESBottomOptionViewDelegate
 - (void)ESBottomOptionViewDidClickCompleteButton:(ESBottomOptionView *)view {
+    if (self.isSelectedOriginal) {
+        [self completeSelectOriginalImage];
+    }else {
+        [self completeSelectThumbnailImage];
+    }
+}
+
+- (void)completeSelectOriginalImage {
     __weak __typeof(self)weakSelf = self;
     for (int i = 0; i < self.selectedAssetArray.count; i++) {
         ESAsset *asset = [self.selectedAssetArray objectAtIndex:i];
@@ -134,19 +162,81 @@
             weakSelf.loadImageCount += 1;
             [weakSelf.selectedImageArray addObject:image];
             if (weakSelf.loadImageCount >= weakSelf.selectedAssetArray.count) {
-                [weakSelf.delegate ESPhotoSelectViewDidSelectedPitureWithImageArray:weakSelf.selectedImageArray];
+                [weakSelf.delegate ESPhotoSelectViewDidSelectedPictureWithImageArray:weakSelf.selectedImageArray];
                 weakSelf.selectedImageArray = nil;
                 weakSelf.loadImageCount = 0;
             }
         } failure:^(NSError *error) {
             weakSelf.loadImageCount += 1;
             if (weakSelf.loadImageCount >= weakSelf.selectedAssetArray.count) {
-                [weakSelf.delegate ESPhotoSelectViewDidSelectedPitureWithImageArray:weakSelf.selectedImageArray];
+                [weakSelf.delegate ESPhotoSelectViewDidSelectedPictureWithImageArray:weakSelf.selectedImageArray];
                 weakSelf.selectedImageArray = nil;
                 weakSelf.loadImageCount = 0;
             }
         }];
     }
+}
+
+- (void)completeSelectThumbnailImage {
+    __weak __typeof(self)weakSelf = self;
+    for (int i = 0; i < self.selectedAssetArray.count; i++) {
+        ESAsset *asset = [self.selectedAssetArray objectAtIndex:i];
+        [[ESPHAssetImageManager sharedManager] loadImageWithPHAsset:asset.asset size:self.singlePhotoSize success:^(UIImage *image) {
+            weakSelf.loadImageCount += 1;
+            [weakSelf.selectedImageArray addObject:image];
+            if (weakSelf.loadImageCount >= weakSelf.selectedAssetArray.count) {
+                [weakSelf.delegate ESPhotoSelectViewDidSelectedPictureWithImageArray:weakSelf.selectedImageArray];
+                weakSelf.selectedImageArray = nil;
+                weakSelf.loadImageCount = 0;
+            }
+        } failure:^(NSError *error) {
+            weakSelf.loadImageCount += 1;
+            if (weakSelf.loadImageCount >= weakSelf.selectedAssetArray.count) {
+                [weakSelf.delegate ESPhotoSelectViewDidSelectedPictureWithImageArray:weakSelf.selectedImageArray];
+                weakSelf.selectedImageArray = nil;
+                weakSelf.loadImageCount = 0;
+            }
+        }];
+    }
+}
+
+- (void)ESBottomOptionViewDidClickPhotoButton:(ESBottomOptionView *)view {
+    if (self.delegate) {
+        if ([self.delegate respondsToSelector:@selector(ESPhotoSelectViewDidSelectedPhotoButton)]) {
+            [self.delegate ESPhotoSelectViewDidSelectedPhotoButton];
+        }
+    }
+}
+
+- (void)ESBottomOptionViewDidClickEditButton:(ESBottomOptionView *)view {
+    if (self.delegate) {
+        if ([self.delegate respondsToSelector:@selector(ESPhotoSelectViewDidSelectedEditWithImageArray:)]) {
+            __weak __typeof(self)weakSelf = self;
+            for (int i = 0; i < self.selectedAssetArray.count; i++) {
+                ESAsset *asset = [self.selectedAssetArray objectAtIndex:i];
+                [[ESPHAssetImageManager sharedManager] loadOriginalImageWithPHAsset:asset.asset success:^(UIImage *image) {
+                    weakSelf.loadImageCount += 1;
+                    [weakSelf.selectedImageArray addObject:image];
+                    if (weakSelf.loadImageCount >= weakSelf.selectedAssetArray.count) {
+                        [weakSelf.delegate ESPhotoSelectViewDidSelectedEditWithImageArray:weakSelf.selectedImageArray];
+                        weakSelf.selectedImageArray = nil;
+                        weakSelf.loadImageCount = 0;
+                    }
+                } failure:^(NSError *error) {
+                    weakSelf.loadImageCount += 1;
+                    if (weakSelf.loadImageCount >= weakSelf.selectedAssetArray.count) {
+                        [weakSelf.delegate ESPhotoSelectViewDidSelectedEditWithImageArray:weakSelf.selectedImageArray];
+                        weakSelf.selectedImageArray = nil;
+                        weakSelf.loadImageCount = 0;
+                    }
+                }];
+            }
+        }
+    }
+}
+
+- (void)ESBottomOptionViewDidClickOriginalButton:(ESBottomOptionView *)view state:(BOOL)isSelected {
+    self.isSelectedOriginal = isSelected;
 }
 
 #pragma mark - setter && getter
@@ -155,16 +245,18 @@
     self.collectionView.frame = frame;
 }
 
-- (void)setSinglePhotoSize:(CGSize)singlePhotoSize {
-    _singlePhotoSize = singlePhotoSize;
-    self.flowLayout.itemSize = singlePhotoSize;
-}
-
 - (NSMutableArray *)selectedAssetArray {
     if (_selectedAssetArray == nil) {
         _selectedAssetArray = [NSMutableArray array];
     }
     return _selectedAssetArray;
+}
+
+- (CGSize)singlePhotoSize {
+    if (_singlePhotoSize.height == 0 || _singlePhotoSize.width == 0) {
+        _singlePhotoSize = CGSizeMake(1960, 1080);
+    }
+    return _singlePhotoSize;
 }
 
 - (NSMutableArray<UIImage *> *)selectedImageArray {

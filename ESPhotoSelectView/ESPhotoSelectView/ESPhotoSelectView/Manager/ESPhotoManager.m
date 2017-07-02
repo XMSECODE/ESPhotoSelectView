@@ -60,7 +60,7 @@ static ESPhotoManager* staticESPhotoManager;
             PHAsset* asset = (PHAsset *)obj;
             if (asset.mediaType == PHAssetMediaTypeImage) {
                 [weakSelf.PHAssetArray addObject:asset];
-                if (weakSelf.PHAssetArray.count >= weakSelf.fetchResult.count) {
+                if (weakSelf.PHAssetArray.count >= [weakSelf.fetchResult countOfAssetsWithMediaType:PHAssetMediaTypeImage]) {
                     NSMutableArray* PHAssetArray = weakSelf.PHAssetArray;
                     weakSelf.PHAssetArray = nil;
                     dispatch_async(dispatch_get_main_queue(), ^{

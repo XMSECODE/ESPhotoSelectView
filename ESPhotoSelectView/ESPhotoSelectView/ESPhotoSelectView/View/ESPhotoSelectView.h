@@ -10,13 +10,21 @@
 
 @protocol ESPhotoSelectViewDelegate <NSObject>
 
-- (void)ESPhotoSelectViewDidSelectedPitureWithImageArray:(NSArray<UIImage *> *)imageArray;
+- (void)ESPhotoSelectViewDidSelectedPictureWithImageArray:(NSArray<UIImage *> *)imageArray;
+
+- (void)ESPhotoSelectViewDidSelectedPhotoButton;
+
+- (void)ESPhotoSelectViewDidSelectedEditWithImageArray:(NSArray<UIImage *> *)imageArray;
+
+- (void)ESPhotoSelectViewDidSelectedOriginalPictureWithImageArray:(NSArray<UIImage *> *)imageArray;
 
 @end
 
 @interface ESPhotoSelectView : UIView
 
 @property(nonatomic,assign)CGSize singlePhotoSize;
+
+@property(nonatomic,assign)BOOL allowMutibleSelect;
 
 @property(nonatomic,weak)id<ESPhotoSelectViewDelegate> delegate;
 

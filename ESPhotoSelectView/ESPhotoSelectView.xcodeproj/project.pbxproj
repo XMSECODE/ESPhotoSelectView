@@ -13,20 +13,22 @@
 		0490BECC1F07995E00498CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0490BECA1F07995E00498CFE /* Main.storyboard */; };
 		0490BECE1F07995E00498CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0490BECD1F07995E00498CFE /* Assets.xcassets */; };
 		0490BED11F07995E00498CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0490BECF1F07995E00498CFE /* LaunchScreen.storyboard */; };
-		0490BEDE1F079E3600498CFE /* ESPhotoSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEDD1F079E3600498CFE /* ESPhotoSelectView.m */; };
-		0490BEE21F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEE01F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.m */; };
-		0490BEE31F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0490BEE11F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.xib */; };
 		0490BEE71F07A21900498CFE /* ESPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEE61F07A21900498CFE /* ESPhotoManager.m */; };
 		0490BEEB1F07A26600498CFE /* ESPHAssetInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEEA1F07A26600498CFE /* ESPHAssetInfoModel.m */; };
-		0490BEEE1F07A70D00498CFE /* UIImageView+PHAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEED1F07A70D00498CFE /* UIImageView+PHAsset.m */; };
 		0490BEF11F07A7E000498CFE /* ESPHAssetImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEF01F07A7E000498CFE /* ESPHAssetImageManager.m */; };
 		0490BEF41F07A91200498CFE /* UIImageViewPHAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEF31F07A91200498CFE /* UIImageViewPHAssetModel.m */; };
-		0490BEF71F07E17E00498CFE /* photo_sel_photoPicker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490BEF61F07E17E00498CFE /* photo_sel_photoPicker@2x.png */; };
-		0490BEF91F07E18600498CFE /* photo_def_photoPicker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490BEF81F07E18600498CFE /* photo_def_photoPicker@2x.png */; };
 		0490BEFC1F07E48300498CFE /* ESAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEFB1F07E48300498CFE /* ESAsset.m */; };
-		0490BF011F07E89400498CFE /* ESBottomOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0490BF001F07E89400498CFE /* ESBottomOptionView.xib */; };
-		0490BF051F092EE800498CFE /* ESBottomOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BEFE1F07E87300498CFE /* ESBottomOptionView.m */; };
 		0490BF071F092F9100498CFE /* ESPhotoAuthorizationStatusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BF031F092EBB00498CFE /* ESPhotoAuthorizationStatusManager.m */; };
+		0490BF131F0946C500498CFE /* UIImageView+PHAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BF121F0946C500498CFE /* UIImageView+PHAsset.m */; };
+		0490BF1D1F0946E400498CFE /* ESBottomOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BF161F0946E400498CFE /* ESBottomOptionView.m */; };
+		0490BF1E1F0946E400498CFE /* ESBottomOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0490BF171F0946E400498CFE /* ESBottomOptionView.xib */; };
+		0490BF1F1F0946E400498CFE /* ESPhotoSelectCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BF191F0946E400498CFE /* ESPhotoSelectCollectionViewCell.m */; };
+		0490BF201F0946E400498CFE /* ESPhotoSelectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0490BF1A1F0946E400498CFE /* ESPhotoSelectCollectionViewCell.xib */; };
+		0490BF211F0946E400498CFE /* ESPhotoSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490BF1C1F0946E400498CFE /* ESPhotoSelectView.m */; };
+		0490BF251F0946F500498CFE /* photo_def_photoPicker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490BF231F0946F500498CFE /* photo_def_photoPicker@2x.png */; };
+		0490BF261F0946F500498CFE /* photo_sel_photoPicker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490BF241F0946F500498CFE /* photo_sel_photoPicker@2x.png */; };
+		0490BF281F094BD100498CFE /* photo_original_def@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490BF271F094BD100498CFE /* photo_original_def@2x.png */; };
+		0490BF2A1F094BDB00498CFE /* photo_original_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490BF291F094BDB00498CFE /* photo_original_sel@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,30 +42,32 @@
 		0490BECD1F07995E00498CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0490BED01F07995E00498CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0490BED21F07995E00498CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0490BEDC1F079E3600498CFE /* ESPhotoSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPhotoSelectView.h; sourceTree = "<group>"; };
-		0490BEDD1F079E3600498CFE /* ESPhotoSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPhotoSelectView.m; sourceTree = "<group>"; };
-		0490BEDF1F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPhotoSelectCollectionViewCell.h; sourceTree = "<group>"; };
-		0490BEE01F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPhotoSelectCollectionViewCell.m; sourceTree = "<group>"; };
-		0490BEE11F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESPhotoSelectCollectionViewCell.xib; sourceTree = "<group>"; };
 		0490BEE51F07A21900498CFE /* ESPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPhotoManager.h; sourceTree = "<group>"; };
 		0490BEE61F07A21900498CFE /* ESPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPhotoManager.m; sourceTree = "<group>"; };
 		0490BEE91F07A26600498CFE /* ESPHAssetInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPHAssetInfoModel.h; sourceTree = "<group>"; };
 		0490BEEA1F07A26600498CFE /* ESPHAssetInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPHAssetInfoModel.m; sourceTree = "<group>"; };
-		0490BEEC1F07A70D00498CFE /* UIImageView+PHAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+PHAsset.h"; sourceTree = "<group>"; };
-		0490BEED1F07A70D00498CFE /* UIImageView+PHAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+PHAsset.m"; sourceTree = "<group>"; };
 		0490BEEF1F07A7E000498CFE /* ESPHAssetImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPHAssetImageManager.h; sourceTree = "<group>"; };
 		0490BEF01F07A7E000498CFE /* ESPHAssetImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPHAssetImageManager.m; sourceTree = "<group>"; };
 		0490BEF21F07A91200498CFE /* UIImageViewPHAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewPHAssetModel.h; sourceTree = "<group>"; };
 		0490BEF31F07A91200498CFE /* UIImageViewPHAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewPHAssetModel.m; sourceTree = "<group>"; };
-		0490BEF61F07E17E00498CFE /* photo_sel_photoPicker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_sel_photoPicker@2x.png"; sourceTree = "<group>"; };
-		0490BEF81F07E18600498CFE /* photo_def_photoPicker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_def_photoPicker@2x.png"; sourceTree = "<group>"; };
 		0490BEFA1F07E48300498CFE /* ESAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESAsset.h; sourceTree = "<group>"; };
 		0490BEFB1F07E48300498CFE /* ESAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESAsset.m; sourceTree = "<group>"; };
-		0490BEFD1F07E87300498CFE /* ESBottomOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESBottomOptionView.h; sourceTree = "<group>"; };
-		0490BEFE1F07E87300498CFE /* ESBottomOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESBottomOptionView.m; sourceTree = "<group>"; };
-		0490BF001F07E89400498CFE /* ESBottomOptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESBottomOptionView.xib; sourceTree = "<group>"; };
 		0490BF021F092EBB00498CFE /* ESPhotoAuthorizationStatusManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPhotoAuthorizationStatusManager.h; sourceTree = "<group>"; };
 		0490BF031F092EBB00498CFE /* ESPhotoAuthorizationStatusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPhotoAuthorizationStatusManager.m; sourceTree = "<group>"; };
+		0490BF111F0946C500498CFE /* UIImageView+PHAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+PHAsset.h"; sourceTree = "<group>"; };
+		0490BF121F0946C500498CFE /* UIImageView+PHAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+PHAsset.m"; sourceTree = "<group>"; };
+		0490BF151F0946E400498CFE /* ESBottomOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESBottomOptionView.h; sourceTree = "<group>"; };
+		0490BF161F0946E400498CFE /* ESBottomOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESBottomOptionView.m; sourceTree = "<group>"; };
+		0490BF171F0946E400498CFE /* ESBottomOptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESBottomOptionView.xib; sourceTree = "<group>"; };
+		0490BF181F0946E400498CFE /* ESPhotoSelectCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPhotoSelectCollectionViewCell.h; sourceTree = "<group>"; };
+		0490BF191F0946E400498CFE /* ESPhotoSelectCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPhotoSelectCollectionViewCell.m; sourceTree = "<group>"; };
+		0490BF1A1F0946E400498CFE /* ESPhotoSelectCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESPhotoSelectCollectionViewCell.xib; sourceTree = "<group>"; };
+		0490BF1B1F0946E400498CFE /* ESPhotoSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPhotoSelectView.h; sourceTree = "<group>"; };
+		0490BF1C1F0946E400498CFE /* ESPhotoSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPhotoSelectView.m; sourceTree = "<group>"; };
+		0490BF231F0946F500498CFE /* photo_def_photoPicker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_def_photoPicker@2x.png"; sourceTree = "<group>"; };
+		0490BF241F0946F500498CFE /* photo_sel_photoPicker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_sel_photoPicker@2x.png"; sourceTree = "<group>"; };
+		0490BF271F094BD100498CFE /* photo_original_def@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_original_def@2x.png"; sourceTree = "<group>"; };
+		0490BF291F094BDB00498CFE /* photo_original_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_original_sel@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,20 +125,11 @@
 		0490BED81F079B3E00498CFE /* ESPhotoSelectView */ = {
 			isa = PBXGroup;
 			children = (
-				0490BEF81F07E18600498CFE /* photo_def_photoPicker@2x.png */,
-				0490BEF61F07E17E00498CFE /* photo_sel_photoPicker@2x.png */,
-				0490BEEC1F07A70D00498CFE /* UIImageView+PHAsset.h */,
-				0490BEED1F07A70D00498CFE /* UIImageView+PHAsset.m */,
+				0490BF221F0946F500498CFE /* Source */,
+				0490BF141F0946E400498CFE /* View */,
+				0490BF101F0946C500498CFE /* Category */,
 				0490BEE81F07A23400498CFE /* Model */,
 				0490BEE41F07A20200498CFE /* Manager */,
-				0490BEDC1F079E3600498CFE /* ESPhotoSelectView.h */,
-				0490BEDD1F079E3600498CFE /* ESPhotoSelectView.m */,
-				0490BEFD1F07E87300498CFE /* ESBottomOptionView.h */,
-				0490BEFE1F07E87300498CFE /* ESBottomOptionView.m */,
-				0490BF001F07E89400498CFE /* ESBottomOptionView.xib */,
-				0490BEDF1F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.h */,
-				0490BEE01F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.m */,
-				0490BEE11F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.xib */,
 			);
 			path = ESPhotoSelectView;
 			sourceTree = "<group>";
@@ -163,6 +158,41 @@
 				0490BEFB1F07E48300498CFE /* ESAsset.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0490BF101F0946C500498CFE /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				0490BF111F0946C500498CFE /* UIImageView+PHAsset.h */,
+				0490BF121F0946C500498CFE /* UIImageView+PHAsset.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		0490BF141F0946E400498CFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0490BF1B1F0946E400498CFE /* ESPhotoSelectView.h */,
+				0490BF1C1F0946E400498CFE /* ESPhotoSelectView.m */,
+				0490BF151F0946E400498CFE /* ESBottomOptionView.h */,
+				0490BF161F0946E400498CFE /* ESBottomOptionView.m */,
+				0490BF171F0946E400498CFE /* ESBottomOptionView.xib */,
+				0490BF181F0946E400498CFE /* ESPhotoSelectCollectionViewCell.h */,
+				0490BF191F0946E400498CFE /* ESPhotoSelectCollectionViewCell.m */,
+				0490BF1A1F0946E400498CFE /* ESPhotoSelectCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0490BF221F0946F500498CFE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0490BF231F0946F500498CFE /* photo_def_photoPicker@2x.png */,
+				0490BF241F0946F500498CFE /* photo_sel_photoPicker@2x.png */,
+				0490BF271F094BD100498CFE /* photo_original_def@2x.png */,
+				0490BF291F094BDB00498CFE /* photo_original_sel@2x.png */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,13 +254,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0490BF011F07E89400498CFE /* ESBottomOptionView.xib in Resources */,
-				0490BEF71F07E17E00498CFE /* photo_sel_photoPicker@2x.png in Resources */,
+				0490BF1E1F0946E400498CFE /* ESBottomOptionView.xib in Resources */,
 				0490BED11F07995E00498CFE /* LaunchScreen.storyboard in Resources */,
-				0490BEE31F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.xib in Resources */,
-				0490BEF91F07E18600498CFE /* photo_def_photoPicker@2x.png in Resources */,
+				0490BF281F094BD100498CFE /* photo_original_def@2x.png in Resources */,
+				0490BF251F0946F500498CFE /* photo_def_photoPicker@2x.png in Resources */,
+				0490BF201F0946E400498CFE /* ESPhotoSelectCollectionViewCell.xib in Resources */,
 				0490BECE1F07995E00498CFE /* Assets.xcassets in Resources */,
 				0490BECC1F07995E00498CFE /* Main.storyboard in Resources */,
+				0490BF2A1F094BDB00498CFE /* photo_original_sel@2x.png in Resources */,
+				0490BF261F0946F500498CFE /* photo_sel_photoPicker@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,18 +274,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0490BF071F092F9100498CFE /* ESPhotoAuthorizationStatusManager.m in Sources */,
-				0490BF051F092EE800498CFE /* ESBottomOptionView.m in Sources */,
 				0490BEF41F07A91200498CFE /* UIImageViewPHAssetModel.m in Sources */,
 				0490BEE71F07A21900498CFE /* ESPhotoManager.m in Sources */,
-				0490BEDE1F079E3600498CFE /* ESPhotoSelectView.m in Sources */,
 				0490BEFC1F07E48300498CFE /* ESAsset.m in Sources */,
 				0490BEC91F07995E00498CFE /* ViewController.m in Sources */,
 				0490BEF11F07A7E000498CFE /* ESPHAssetImageManager.m in Sources */,
-				0490BEEE1F07A70D00498CFE /* UIImageView+PHAsset.m in Sources */,
 				0490BEEB1F07A26600498CFE /* ESPHAssetInfoModel.m in Sources */,
 				0490BEC61F07995E00498CFE /* AppDelegate.m in Sources */,
 				0490BEC31F07995E00498CFE /* main.m in Sources */,
-				0490BEE21F07A05A00498CFE /* ESPhotoSelectCollectionViewCell.m in Sources */,
+				0490BF211F0946E400498CFE /* ESPhotoSelectView.m in Sources */,
+				0490BF131F0946C500498CFE /* UIImageView+PHAsset.m in Sources */,
+				0490BF1D1F0946E400498CFE /* ESBottomOptionView.m in Sources */,
+				0490BF1F1F0946E400498CFE /* ESPhotoSelectCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +446,7 @@
 				0490BED71F07995E00498CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
