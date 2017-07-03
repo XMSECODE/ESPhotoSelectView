@@ -31,6 +31,8 @@
 
 @property(nonatomic,assign)BOOL isSelectedOriginal;
 
+@property(nonatomic,assign)BOOL loadingImage;
+
 @end
 
 @implementation ESPhotoSelectView
@@ -147,6 +149,10 @@
 
 #pragma mark - ESBottomOptionViewDelegate
 - (void)ESBottomOptionViewDidClickCompleteButton:(ESBottomOptionView *)view {
+    if (self.loadingImage == YES) {
+        return;
+    }
+    self.loadingImage = YES;
     if (self.isSelectedOriginal) {
         [self completeSelectOriginalImage];
     }else {
@@ -165,6 +171,7 @@
                 [weakSelf.delegate ESPhotoSelectViewDidSelectedPictureWithImageArray:weakSelf.selectedImageArray];
                 weakSelf.selectedImageArray = nil;
                 weakSelf.loadImageCount = 0;
+                self.loadingImage = NO;
             }
         } failure:^(NSError *error) {
             weakSelf.loadImageCount += 1;
@@ -172,6 +179,7 @@
                 [weakSelf.delegate ESPhotoSelectViewDidSelectedPictureWithImageArray:weakSelf.selectedImageArray];
                 weakSelf.selectedImageArray = nil;
                 weakSelf.loadImageCount = 0;
+                self.loadingImage = NO;
             }
         }];
     }
@@ -182,12 +190,19 @@
     for (int i = 0; i < self.selectedAssetArray.count; i++) {
         ESAsset *asset = [self.selectedAssetArray objectAtIndex:i];
         [[ESPHAssetImageManager sharedManager] loadImageWithPHAsset:asset.asset size:self.singlePhotoSize success:^(UIImage *image) {
+            if (weakSelf.singlePhotoSize.width != 60 && weakSelf.singlePhotoSize.height != 40) {
+                CGSize imageSize = image.size;
+                if (imageSize.width == 60 && imageSize.height == 40) {
+                    return ;
+                }
+            }
             weakSelf.loadImageCount += 1;
             [weakSelf.selectedImageArray addObject:image];
             if (weakSelf.loadImageCount >= weakSelf.selectedAssetArray.count) {
                 [weakSelf.delegate ESPhotoSelectViewDidSelectedPictureWithImageArray:weakSelf.selectedImageArray];
                 weakSelf.selectedImageArray = nil;
                 weakSelf.loadImageCount = 0;
+                self.loadingImage = NO;
             }
         } failure:^(NSError *error) {
             weakSelf.loadImageCount += 1;
@@ -195,6 +210,7 @@
                 [weakSelf.delegate ESPhotoSelectViewDidSelectedPictureWithImageArray:weakSelf.selectedImageArray];
                 weakSelf.selectedImageArray = nil;
                 weakSelf.loadImageCount = 0;
+                self.loadingImage = NO;
             }
         }];
     }
