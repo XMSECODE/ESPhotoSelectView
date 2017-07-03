@@ -12,6 +12,7 @@
 #import "ESAsset.h"
 #import "ESBottomOptionView.h"
 #import "ESPHAssetImageManager.h"
+#import "ESPhotoCollectionViewCameraCell.h"
 
 @interface ESPhotoSelectView () <UICollectionViewDelegate, UICollectionViewDataSource, ESPhotoSelectCollectionViewCellDelegate, ESBottomOptionViewDelegate>
 
@@ -66,6 +67,7 @@
     self.collectionView.dataSource = self;
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerNib:[UINib nibWithNibName:@"ESPhotoSelectCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:ESPhotoSelectCollectionViewCellId];
+    [self.collectionView registerClass:[ESPhotoCollectionViewCameraCell class] forCellWithReuseIdentifier:ESPhotoCollectionViewCameraCellId];
 }
 
 - (void)setupBottomOptionView {
@@ -101,18 +103,22 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.assetArray.count;
+    return self.assetArray.count + 1;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.item == 0) {
+        ESPhotoCollectionViewCameraCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ESPhotoCollectionViewCameraCellId forIndexPath:indexPath];
+        return cell;
+    }
     ESPhotoSelectCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ESPhotoSelectCollectionViewCellId forIndexPath:indexPath];
     cell.delegate = self;
-    cell.asset = [self assetArrayAtIndex:indexPath.item];
+    cell.asset = [self assetArrayAtIndex:indexPath.item - 1];
     return cell;
 }
 
 - (ESAsset *)assetArrayAtIndex:(NSInteger)index {
-    if (index >= self.assetArray.count) {
+    if (index >= self.assetArray.count && index < 0) {
         return nil;
     }
     return [self.assetArray objectAtIndex:index];

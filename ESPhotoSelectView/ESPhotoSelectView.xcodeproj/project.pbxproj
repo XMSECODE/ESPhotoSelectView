@@ -29,6 +29,7 @@
 		0490BF261F0946F500498CFE /* photo_sel_photoPicker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490BF241F0946F500498CFE /* photo_sel_photoPicker@2x.png */; };
 		0490BF281F094BD100498CFE /* photo_original_def@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490BF271F094BD100498CFE /* photo_original_def@2x.png */; };
 		0490BF2A1F094BDB00498CFE /* photo_original_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490BF291F094BDB00498CFE /* photo_original_sel@2x.png */; };
+		04B0BFD31F0A8EE500621CF2 /* ESPhotoCollectionViewCameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0BFD11F0A8EE500621CF2 /* ESPhotoCollectionViewCameraCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,8 @@
 		0490BF241F0946F500498CFE /* photo_sel_photoPicker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_sel_photoPicker@2x.png"; sourceTree = "<group>"; };
 		0490BF271F094BD100498CFE /* photo_original_def@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_original_def@2x.png"; sourceTree = "<group>"; };
 		0490BF291F094BDB00498CFE /* photo_original_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_original_sel@2x.png"; sourceTree = "<group>"; };
+		04B0BFD01F0A8EE500621CF2 /* ESPhotoCollectionViewCameraCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPhotoCollectionViewCameraCell.h; sourceTree = "<group>"; };
+		04B0BFD11F0A8EE500621CF2 /* ESPhotoCollectionViewCameraCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPhotoCollectionViewCameraCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 				0490BF181F0946E400498CFE /* ESPhotoSelectCollectionViewCell.h */,
 				0490BF191F0946E400498CFE /* ESPhotoSelectCollectionViewCell.m */,
 				0490BF1A1F0946E400498CFE /* ESPhotoSelectCollectionViewCell.xib */,
+				04B0BFD01F0A8EE500621CF2 /* ESPhotoCollectionViewCameraCell.h */,
+				04B0BFD11F0A8EE500621CF2 /* ESPhotoCollectionViewCameraCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				0490BEFC1F07E48300498CFE /* ESAsset.m in Sources */,
 				0490BEC91F07995E00498CFE /* ViewController.m in Sources */,
 				0490BEF11F07A7E000498CFE /* ESPHAssetImageManager.m in Sources */,
+				04B0BFD31F0A8EE500621CF2 /* ESPhotoCollectionViewCameraCell.m in Sources */,
 				0490BEEB1F07A26600498CFE /* ESPHAssetInfoModel.m in Sources */,
 				0490BEC61F07995E00498CFE /* AppDelegate.m in Sources */,
 				0490BEC31F07995E00498CFE /* main.m in Sources */,
