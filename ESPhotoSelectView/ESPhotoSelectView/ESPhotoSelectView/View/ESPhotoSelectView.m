@@ -14,7 +14,7 @@
 #import "ESPHAssetImageManager.h"
 #import "ESPhotoCollectionViewCameraCell.h"
 
-@interface ESPhotoSelectView () <UICollectionViewDelegate, UICollectionViewDataSource, ESPhotoSelectCollectionViewCellDelegate, ESBottomOptionViewDelegate>
+@interface ESPhotoSelectView () <UICollectionViewDelegate, UICollectionViewDataSource, ESPhotoSelectCollectionViewCellDelegate, ESBottomOptionViewDelegate, ESPhotoCollectionViewCameraCellDelegate>
 
 @property(nonatomic,weak)UICollectionView* collectionView;
 
@@ -109,6 +109,7 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.item == 0) {
         ESPhotoCollectionViewCameraCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ESPhotoCollectionViewCameraCellId forIndexPath:indexPath];
+        cell.delegate = self;
         return cell;
     }
     ESPhotoSelectCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ESPhotoSelectCollectionViewCellId forIndexPath:indexPath];
@@ -151,6 +152,14 @@
             }
         }
     }
+}
+
+#pragma mark - ESPhotoCollectionViewCameraCellDelegate
+- (void)getImageFromeCamera:(UIImage *)image {
+        [self.delegate ESPhotoSelectViewDidSelectedPictureWithImageArray:@[image]];
+        self.selectedImageArray = nil;
+        self.loadImageCount = 0;
+        self.loadingImage = NO;
 }
 
 #pragma mark - ESBottomOptionViewDelegate

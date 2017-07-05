@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ESPhotoCollectionViewCameraCellDelegate <NSObject>
+
+- (void)getImageFromeCamera:(UIImage *)image;
+
+@end
+
 static NSString *ESPhotoCollectionViewCameraCellId = @"ESPhotoCollectionViewCameraCellId";
 
 @interface ESPhotoCollectionViewCameraCell : UICollectionViewCell
+
+@property(nonatomic,weak)id<ESPhotoCollectionViewCameraCellDelegate> delegate;
 
 @end

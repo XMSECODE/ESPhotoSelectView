@@ -12,6 +12,7 @@
 
 - (void)ESPhotoSelectViewDidSelectedPictureWithImageArray:(NSArray<UIImage *> *)imageArray;
 
+@optional
 - (void)ESPhotoSelectViewDidSelectedPhotoButton;
 
 - (void)ESPhotoSelectViewDidSelectedEditWithImageArray:(NSArray<UIImage *> *)imageArray;

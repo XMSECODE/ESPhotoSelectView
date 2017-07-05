@@ -62,9 +62,11 @@ static ESPhotoManager* staticESPhotoManager;
                 [weakSelf.PHAssetArray addObject:asset];
                 if (weakSelf.PHAssetArray.count >= [weakSelf.fetchResult countOfAssetsWithMediaType:PHAssetMediaTypeImage]) {
                     NSMutableArray* PHAssetArray = weakSelf.PHAssetArray;
+                    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO];
+                    NSArray *phAssetArray = [PHAssetArray sortedArrayUsingDescriptors:@[sortDescriptor]];
                     weakSelf.PHAssetArray = nil;
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        success(PHAssetArray);
+                        success(phAssetArray);
                         return ;
                     });
                 }
