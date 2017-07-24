@@ -205,12 +205,6 @@
     for (int i = 0; i < self.selectedAssetArray.count; i++) {
         ESAsset *asset = [self.selectedAssetArray objectAtIndex:i];
         [[ESPHAssetImageManager sharedManager] loadImageWithPHAsset:asset.asset size:self.singlePhotoSize success:^(UIImage *image) {
-            if (weakSelf.singlePhotoSize.width != 60 && weakSelf.singlePhotoSize.height != 40) {
-                CGSize imageSize = image.size;
-                if (imageSize.width == 60 && imageSize.height == 40) {
-                    return ;
-                }
-            }
             weakSelf.loadImageCount += 1;
             [weakSelf.selectedImageArray addObject:image];
             if (weakSelf.loadImageCount >= weakSelf.selectedAssetArray.count) {

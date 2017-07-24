@@ -72,7 +72,8 @@
 - (void)didClickTakePhotoButton {
 
     AVCapturePhotoSettings * photoSetting = [AVCapturePhotoSettings photoSettings];
-    [self.photoOutput capturePhotoWithSettings:photoSetting delegate:self];}
+    [self.photoOutput capturePhotoWithSettings:photoSetting delegate:self];
+}
 
 #pragma mark - AVCapturePhotoCaptureDelegate
 - (void)captureOutput:(AVCapturePhotoOutput *)captureOutput willBeginCaptureForResolvedSettings:(AVCaptureResolvedPhotoSettings *)resolvedSettings {

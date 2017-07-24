@@ -84,7 +84,7 @@ static ESPHAssetImageManager *staticESPHAssetImageManager;
 - (void)loadImageWithPHAsset:(PHAsset *)asset size:(CGSize)size success:(void(^)(UIImage *image))success failure:(void(^)(NSError *error))failure {
     PHImageRequestOptions* options = [[PHImageRequestOptions alloc] init];
     options.resizeMode = PHImageRequestOptionsResizeModeFast;
-    
+    options.synchronous = YES;
     [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:size contentMode:PHImageContentModeDefault options:options resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
         if (result) {
             success(result);
