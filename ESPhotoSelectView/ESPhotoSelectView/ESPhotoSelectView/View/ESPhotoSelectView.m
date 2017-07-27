@@ -129,7 +129,7 @@
 - (void)ESPhotoSelectCollectionViewCell:(ESPhotoSelectCollectionViewCell *)cell PHAsset:(ESAsset *)asset {
     if (self.allowMutibleSelect) {
         if (asset.isSeleted) {
-            [self.selectedAssetArray addObject:asset];
+            [self AddToSelectedAssetArray:asset];
         }else {
             if ([self.selectedAssetArray containsObject:asset]) {
                 [self.selectedAssetArray removeObject:asset];
@@ -140,9 +140,8 @@
             if (self.selectedAssetArray.count > 0) {
                 ESAsset *lastAsset = self.selectedAssetArray.lastObject;
                 lastAsset.isSeleted = NO;
-                [self.selectedAssetArray removeObject:lastAsset];
-                [self.selectedAssetArray addObject:asset];
-                [self.collectionView reloadData];
+                self.selectedAssetArray = [@[asset] mutableCopy];
+//                [self.collectionView reloadData];
             }else {
                 [self.selectedAssetArray addObject:asset];
             }
@@ -262,6 +261,13 @@
 
 - (void)ESBottomOptionViewDidClickOriginalButton:(ESBottomOptionView *)view state:(BOOL)isSelected {
     self.isSelectedOriginal = isSelected;
+}
+
+#pragma mark - Private
+- (void)AddToSelectedAssetArray:(ESAsset *)asset {
+    [self.selectedAssetArray addObject:asset];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"asset.modificationDate" ascending:NO];
+    [self.selectedAssetArray sortUsingDescriptors:@[sort]];
 }
 
 #pragma mark - setter && getter

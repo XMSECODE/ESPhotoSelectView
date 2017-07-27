@@ -30,6 +30,7 @@
 		0490BF281F094BD100498CFE /* photo_original_def@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490BF271F094BD100498CFE /* photo_original_def@2x.png */; };
 		0490BF2A1F094BDB00498CFE /* photo_original_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490BF291F094BDB00498CFE /* photo_original_sel@2x.png */; };
 		04B0BFD31F0A8EE500621CF2 /* ESPhotoCollectionViewCameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0BFD11F0A8EE500621CF2 /* ESPhotoCollectionViewCameraCell.m */; };
+		F047D0BC1F2984E100F08D0A /* JPFPSStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F047D0BB1F2984E100F08D0A /* JPFPSStatus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,8 @@
 		0490BF291F094BDB00498CFE /* photo_original_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_original_sel@2x.png"; sourceTree = "<group>"; };
 		04B0BFD01F0A8EE500621CF2 /* ESPhotoCollectionViewCameraCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPhotoCollectionViewCameraCell.h; sourceTree = "<group>"; };
 		04B0BFD11F0A8EE500621CF2 /* ESPhotoCollectionViewCameraCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPhotoCollectionViewCameraCell.m; sourceTree = "<group>"; };
+		F047D0BA1F2984E100F08D0A /* JPFPSStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPFPSStatus.h; sourceTree = "<group>"; };
+		F047D0BB1F2984E100F08D0A /* JPFPSStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPFPSStatus.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 		0490BEC01F07995E00498CFE /* ESPhotoSelectView */ = {
 			isa = PBXGroup;
 			children = (
+				F047D0B91F2984E100F08D0A /* JPFPSStatus */,
 				0490BED81F079B3E00498CFE /* ESPhotoSelectView */,
 				0490BEC41F07995E00498CFE /* AppDelegate.h */,
 				0490BEC51F07995E00498CFE /* AppDelegate.m */,
@@ -200,6 +204,15 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		F047D0B91F2984E100F08D0A /* JPFPSStatus */ = {
+			isa = PBXGroup;
+			children = (
+				F047D0BA1F2984E100F08D0A /* JPFPSStatus.h */,
+				F047D0BB1F2984E100F08D0A /* JPFPSStatus.m */,
+			);
+			path = JPFPSStatus;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,7 +244,7 @@
 				TargetAttributes = {
 					0490BEBD1F07995E00498CFE = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 592AQVU6H7;
+						DevelopmentTeam = S5BVK59226;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -286,6 +299,7 @@
 				0490BEF11F07A7E000498CFE /* ESPHAssetImageManager.m in Sources */,
 				04B0BFD31F0A8EE500621CF2 /* ESPhotoCollectionViewCameraCell.m in Sources */,
 				0490BEEB1F07A26600498CFE /* ESPHAssetInfoModel.m in Sources */,
+				F047D0BC1F2984E100F08D0A /* JPFPSStatus.m in Sources */,
 				0490BEC61F07995E00498CFE /* AppDelegate.m in Sources */,
 				0490BEC31F07995E00498CFE /* main.m in Sources */,
 				0490BF211F0946E400498CFE /* ESPhotoSelectView.m in Sources */,
@@ -413,7 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 592AQVU6H7;
+				DEVELOPMENT_TEAM = S5BVK59226;
 				INFOPLIST_FILE = ESPhotoSelectView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.XMSECODE.ESPhotoSelectView;
@@ -425,7 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 592AQVU6H7;
+				DEVELOPMENT_TEAM = S5BVK59226;
 				INFOPLIST_FILE = ESPhotoSelectView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.XMSECODE.ESPhotoSelectView;

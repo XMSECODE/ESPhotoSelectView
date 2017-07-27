@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "JPFPSStatus.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[JPFPSStatus sharedInstance] open];
+    [[JPFPSStatus sharedInstance] openWithHandler:^(NSInteger fpsValue) {
+        NSLog(@"%zd",fpsValue);
+    }];
     return YES;
 }
 
