@@ -141,7 +141,6 @@
                 ESAsset *lastAsset = self.selectedAssetArray.lastObject;
                 lastAsset.isSeleted = NO;
                 self.selectedAssetArray = [@[asset] mutableCopy];
-//                [self.collectionView reloadData];
             }else {
                 [self.selectedAssetArray addObject:asset];
             }
@@ -155,10 +154,10 @@
 
 #pragma mark - ESPhotoCollectionViewCameraCellDelegate
 - (void)getImageFromeCamera:(UIImage *)image {
-        [self.delegate ESPhotoSelectViewDidSelectedPictureWithImageArray:@[image]];
-        self.selectedImageArray = nil;
-        self.loadImageCount = 0;
-        self.loadingImage = NO;
+    [self.delegate ESPhotoSelectViewDidSelectedPictureWithImageArray:@[image]];
+    self.selectedImageArray = nil;
+    self.loadImageCount = 0;
+    self.loadingImage = NO;
 }
 
 #pragma mark - ESBottomOptionViewDelegate
