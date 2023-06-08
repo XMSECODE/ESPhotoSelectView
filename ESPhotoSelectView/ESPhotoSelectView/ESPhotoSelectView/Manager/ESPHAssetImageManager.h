@@ -6,7 +6,7 @@
 //  Copyright © 2017年 XMSECODE. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
 
 @interface ESPHAssetImageManager : NSObject

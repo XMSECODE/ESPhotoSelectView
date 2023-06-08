@@ -32,7 +32,7 @@
 - (void)setPhotoSelectView {
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
     
-    ESPhotoSelectView *view = [[ESPhotoSelectView alloc] initWithFrame:CGRectMake(0, 20, screenSize.width, 200)];
+    ESPhotoSelectView *view = [[ESPhotoSelectView alloc] initWithFrame:CGRectMake(0, 120, screenSize.width, 200)];
     
     [self.view addSubview:view];
     
